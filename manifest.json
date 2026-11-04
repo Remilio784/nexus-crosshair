@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "NEXUS Crosshair",
+  "version": "1.0.0",
+  "description": "Personnalisez le viseur affiché sur Bloxd.io.",
+  "permissions": ["storage"],
+  "host_permissions": [
+    "*://bloxd.io/*",
+    "*://*.bloxd.io/*"
+  ],
+  "action": {
+    "default_title": "NEXUS Crosshair",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://bloxd.io/*",
+        "*://*.bloxd.io/*"
+      ],
+      "css": ["crosshair.css"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
